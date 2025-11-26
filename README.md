@@ -46,5 +46,3 @@ Terminalde şu çıktıyı gördüğünüzde bağlantı başarılıdır:
 ```
 "Mongoose ... adresindeki veritabanına bağlandı"
 ```
-
----
