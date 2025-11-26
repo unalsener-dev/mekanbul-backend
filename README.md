@@ -1,49 +1,50 @@
-📍 Mekanbul Backend Projesi
+# 📍 Mekanbul Backend
 
-Bu proje, Web Teknolojileri ve Programlama dersi kapsamında geliştirilmiş; mekanları listeleyen, detaylarını sunan ve yorum altyapısını sağlayan bir RESTful API sunucusudur.
-Veritabanı olarak MongoDB Atlas (Cloud) kullanılmakta olup, veriler bulutta tutulmaktadır.
+Bu proje, **Web Teknolojileri ve Programlama** dersi kapsamında geliştirilmiş; mekanları listeleyen, detaylarını sunan ve yorum altyapısını sağlayan bir **RESTful API** sunucusudur.
 
-🚀 Kullanılan Teknolojiler
+Proje, veritabanı olarak **MongoDB Atlas (Cloud)** kullanmaktadır ve veriler bulutta tutulmaktadır.
 
-Node.js – Sunucu çalışma ortamı
+## 🚀 Kullanılan Teknolojiler
 
-Express.js – Web uygulama çatısı
+* **Node.js**: Sunucu tarafı çalışma ortamı
+* **Express.js**: Web uygulama çatısı
+* **MongoDB Atlas**: Bulut tabanlı NoSQL veritabanı
+* **Mongoose**: MongoDB için nesne modelleme aracı
 
-MongoDB Atlas – Bulut tabanlı NoSQL veritabanı
+---
 
-Mongoose – MongoDB için nesne modelleme aracı
+## 🛠️ Kurulum ve Çalıştırma Adımları
 
-🛠️ Kurulum ve Çalıştırma
-1. Projeyi Klonlayın
+Bu projeyi yerel bilgisayarınızda çalıştırmak için aşağıdaki adımları izleyebilirsiniz:
 
+### 1. Projeyi Klonlayın
+```bash
 git clone https://github.com/unalsener-dev/mekanbul-backend.git
 cd mekanbul-backend
+```
 
-2. Bağımlılıkları Yükleyin
+### 2. Bağımlılıkları Yükleyin
 
+Proje dosyalarında `node_modules` klasörü bulunmamaktadır (`.gitignore` ile engellenmiştir). Gerekli paketleri yüklemek için terminalde şu komutu çalıştırın:
+```bash
 npm install
+```
 
-3. Uygulamayı Başlatın
+### 3. Uygulamayı Başlatın
 
+Veritabanı bağlantı ayarları `app_api/models/db.js` dosyasında yapılandırılmıştır ve doğrudan çalışmaya hazırdır.
+```bash
 npm start
-veya nodemon kullanıyorsanız:
+```
+
+Veya `nodemon` yüklü ise:
+```bash
 nodemon
+```
 
-Başarılı bağlantıda terminal şuna benzer bir çıktı verir:
+Terminalde şu çıktıyı gördüğünüzde bağlantı başarılıdır:
+```
 "Mongoose ... adresindeki veritabanına bağlandı"
+```
 
-📂 Veritabanı Scriptleri (MongoDB Playground)
-
-Proje ana dizinindeki .mongodb dosyaları, VS Code MongoDB Extension ile çalıştırılarak veritabanı yönetilebilir:
-
-insert.mongodb → Koleksiyonu temizler ve 6 örnek mekanı yeniden oluşturur
-
-update.mongodb → Var olan mekanlara örnek yorumlar ekler
-
-🔗 API Rotaları
-
-GET /api/venues → Tüm mekanları listeler
-
-GET /api/venues/:venueid → Belirli mekanın detaylarını getirir
-
-POST /api/venues/:venueid/comments → Mekana yorum ekler
+---
