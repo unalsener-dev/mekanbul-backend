@@ -1,14 +1,110 @@
 const database = 'mekanbul';
 use(database);
-db.venues.updateOne({"name":"Barida Cam Kafe"},
-  {$push: {"comments": 
-    {
-      "_id": ObjectId(),
-      "author": "Sinan",
-      "rating": 5,
-      "text": "Kahveler harika",
-      "date": new Date()
+
+// 1. Barida Cam Kafe Yorumları
+db.venues.updateOne(
+  { "name": "Barida Cam Kafe" },
+  {
+    $push: {
+      "comments": {
+        $each: [
+          { "_id": ObjectId(), "author": "Sinan", "rating": 5, "text": "Manzarası harika, çaylar taze.", "date": new Date() },
+          { "_id": ObjectId(), "author": "Ayşe", "rating": 4, "text": "Pastalar lezzetli ama biraz pahalı.", "date": new Date() },
+          { "_id": ObjectId(), "author": "Mehmet", "rating": 3, "text": "Hafta sonu çok kalabalık oluyor, yer bulamadık.", "date": new Date() },
+          { "_id": ObjectId(), "author": "Fatma", "rating": 5, "text": "Ders çalışmak için ideal bir sessizlikteydi.", "date": new Date() },
+          { "_id": ObjectId(), "author": "Ali", "rating": 4, "text": "Personel güler yüzlü, servis hızlı.", "date": new Date() }
+        ]
+      }
     }
   }
-}
-)
+);
+
+// 2. Routine Burger Yorumları
+db.venues.updateOne(
+  { "name": "Routine Burger" },
+  {
+    $push: {
+      "comments": {
+        $each: [
+          { "_id": ObjectId(), "author": "Mert", "rating": 5, "text": "Burgerler efsane, soslara bayıldım.", "date": new Date() },
+          { "_id": ObjectId(), "author": "Selin", "rating": 4, "text": "Milkshake çeşitleri çok başarılı.", "date": new Date() },
+          { "_id": ObjectId(), "author": "Can", "rating": 5, "text": "Fatih mahallesindeki en iyi burgerci.", "date": new Date() },
+          { "_id": ObjectId(), "author": "Zeynep", "rating": 3, "text": "Patatesler biraz soğuk geldi.", "date": new Date() },
+          { "_id": ObjectId(), "author": "Burak", "rating": 5, "text": "Müzikler ve ortam çok cool.", "date": new Date() }
+        ]
+      }
+    }
+  }
+);
+
+// 3. Yesene Döner Yorumları
+db.venues.updateOne(
+  { "name": "Yesene Döner" },
+  {
+    $push: {
+      "comments": {
+        $each: [
+          { "_id": ObjectId(), "author": "Elif", "rating": 3, "text": "Fiyat performans yeri, öğrenci işi.", "date": new Date() },
+          { "_id": ObjectId(), "author": "Ahmet", "rating": 4, "text": "Döneri lezzetli ve doyurucu.", "date": new Date() },
+          { "_id": ObjectId(), "author": "Ceren", "rating": 2, "text": "Servis çok yavaştı, beklemekten sıkıldık.", "date": new Date() },
+          { "_id": ObjectId(), "author": "Mustafa", "rating": 4, "text": "Pilav üstü döneri tavsiye ederim.", "date": new Date() },
+          { "_id": ObjectId(), "author": "Gizem", "rating": 3, "text": "Ortalama bir lezzet, çok beklentiniz olmasın.", "date": new Date() }
+        ]
+      }
+    }
+  }
+);
+
+// 4. Barbi Döner Yorumları
+db.venues.updateOne(
+  { "name": "Barbi Döner" },
+  {
+    $push: {
+      "comments": {
+        $each: [
+          { "_id": ObjectId(), "author": "Cem", "rating": 5, "text": "Sosu bol, ekmeği çıtır. Harika.", "date": new Date() },
+          { "_id": ObjectId(), "author": "Onur", "rating": 4, "text": "SDÜ öğrencisinin vazgeçilmezi.", "date": new Date() },
+          { "_id": ObjectId(), "author": "Gamze", "rating": 5, "text": "Ayranı bol köpüklü, bayıldım.", "date": new Date() },
+          { "_id": ObjectId(), "author": "Kadir", "rating": 3, "text": "Mekan biraz havasızdı.", "date": new Date() },
+          { "_id": ObjectId(), "author": "Esra", "rating": 4, "text": "Zurna dürümü tek geçerim.", "date": new Date() }
+        ]
+      }
+    }
+  }
+);
+
+// 5. Şehzade Döner&Kebap Yorumları
+db.venues.updateOne(
+  { "name": "Şehzade Döner&Kebap" },
+  {
+    $push: {
+      "comments": {
+        $each: [
+          { "_id": ObjectId(), "author": "Ali", "rating": 5, "text": "Isparta'nın en iyi iskendercisi.", "date": new Date() },
+          { "_id": ObjectId(), "author": "Veli", "rating": 5, "text": "Etin kalitesi kendini belli ediyor.", "date": new Date() },
+          { "_id": ObjectId(), "author": "Hacer", "rating": 4, "text": "Porsiyonlar büyük, tıka basa doyduk.", "date": new Date() },
+          { "_id": ObjectId(), "author": "Kemal", "rating": 5, "text": "Gece geç saate kadar açık olması süper.", "date": new Date() },
+          { "_id": ObjectId(), "author": "Buse", "rating": 4, "text": "Fiyatlar biraz yüksek ama lezzete değer.", "date": new Date() }
+        ]
+      }
+    }
+  }
+);
+
+// 6. Balta Burger Yorumları
+db.venues.updateOne(
+  { "name": "Balta Burger" },
+  {
+    $push: {
+      "comments": {
+        $each: [
+          { "_id": ObjectId(), "author": "Deniz", "rating": 4, "text": "Cheeseburger çok başarılı.", "date": new Date() },
+          { "_id": ObjectId(), "author": "Umut", "rating": 5, "text": "Soğan halkaları ev yapımı gibi, çok doğal.", "date": new Date() },
+          { "_id": ObjectId(), "author": "Ezgi", "rating": 3, "text": "Servis biraz daha hızlı olabilirdi.", "date": new Date() },
+          { "_id": ObjectId(), "author": "Tarık", "rating": 5, "text": "Mekanın tasarımı çok hoşuma gitti.", "date": new Date() },
+          { "_id": ObjectId(), "author": "Bahar", "rating": 4, "text": "Arkadaşlarla toplanmak için güzel bir yer.", "date": new Date() }
+        ]
+      }
+    }
+  }
+);

@@ -15,10 +15,7 @@ db.venues.insertMany([
       { "days": "Pazartesi-Cuma", "open": "09:00", "close": "17:00", "isClosed": false },
       { "days": "Cumartesi-Pazar", "open": "11:00", "close": "17:00", "isClosed": false }
     ],
-    "comments": [
-        { "author": "Sinan", "rating": 5, "text": "Çaylar taze.", "date": new Date("2024-10-12") },
-        { "author": "Ayşe", "rating": 4, "text": "Ders aralarında uğrak mekanımız, pastaları fena değil.", "date": new Date("2024-11-01") }
-    ]
+    "comments": [] 
   },
   // 2. MEKAN
   {
@@ -31,11 +28,7 @@ db.venues.insertMany([
       { "days": "Pazartesi-Cuma", "open": "11:00", "close": "23:00", "isClosed": false },
       { "days": "Cumartesi-Pazar", "open": "12:00", "close": "00:00", "isClosed": false }
     ],
-    "comments": [
-        { "author": "Mert", "rating": 5, "text": "Burgerleri gerçekten çok lezzetli, tavsiye ederim.", "date": new Date("2024-11-20") },
-        { "author": "Selin", "rating": 4, "text": "Milkshake çeşitleri çok iyi ama hafta sonu yer bulmak zor.", "date": new Date("2024-11-15") },
-        { "author": "Kaan", "rating": 5, "text": "Fatih mahallesinin incisi, soslarına bayıldım.", "date": new Date("2024-10-30") }
-    ]
+    "comments": []
   },
   // 3. MEKAN
   {
@@ -47,10 +40,7 @@ db.venues.insertMany([
     "hours": [
       { "days": "Her gün", "open": "08:00", "close": "22:00", "isClosed": false }
     ],
-    "comments": [
-        { "author": "Burak", "rating": 3, "text": "Fiyat performans yeri, öğrenci işi.", "date": new Date("2024-09-25") },
-        { "author": "Elif", "rating": 4, "text": "Döneri lezzetli ama bazen servis yavaş olabiliyor.", "date": new Date("2024-10-05") }
-    ]
+    "comments": []
   },
   // 4. MEKAN
   {
@@ -63,11 +53,7 @@ db.venues.insertMany([
       { "days": "Pazartesi-Cumartesi", "open": "10:00", "close": "21:00", "isClosed": false },
       { "days": "Pazar", "open": "Kapalı", "close": "Kapalı", "isClosed": true }
     ],
-    "comments": [
-        { "author": "Cem", "rating": 5, "text": "İstasyon caddesindeki en iyi soslu döner.", "date": new Date("2024-11-10") },
-        { "author": "Zeynep", "rating": 4, "text": "Porsiyonlar doyurucu, ayranı bol köpüklü.", "date": new Date("2024-11-22") },
-        { "author": "Onur", "rating": 3, "text": "Öğle saatlerinde çok kalabalık oluyor.", "date": new Date("2024-10-18") }
-    ]
+    "comments": []
   },
   // 5. MEKAN
   {
@@ -79,11 +65,7 @@ db.venues.insertMany([
     "hours": [
       { "days": "Her gün", "open": "11:00", "close": "03:00", "isClosed": false }
     ],
-    "comments": [
-        { "author": "Ali", "rating": 5, "text": "Isparta'nın en iyi et dönercisi.", "date": new Date("2024-11-25") },
-        { "author": "Fatma", "rating": 5, "text": "İskenderi efsane, tereyağını bol döküyorlar.", "date": new Date("2024-11-18") },
-        { "author": "Mehmet", "rating": 5, "text": "Gece geç saate kadar açık olması süper.", "date": new Date("2024-10-29") }
-    ]
+    "comments": []
   },
   // 6. MEKAN
   {
@@ -96,9 +78,6 @@ db.venues.insertMany([
       { "days": "Hafta içi", "open": "11:00", "close": "21:00", "isClosed": false },
       { "days": "Hafta sonu", "open": "12:00", "close": "23:00", "isClosed": false }
     ],
-    "comments": [
-        { "author": "Deniz", "rating": 4, "text": "Cheeseburgerin ekmeği çok tazeydi.", "date": new Date("2024-11-02") },
-        { "author": "Can", "rating": 5, "text": "Soğan halkaları ev yapımı gibi, bayıldım.", "date": new Date("2024-11-12") }
-    ]
+    "comments": []
   }
 ]);
