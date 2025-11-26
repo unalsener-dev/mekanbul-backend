@@ -1,0 +1,104 @@
+const database = 'mekanbul';
+use(database);
+
+db.venues.drop();
+
+db.venues.insertMany([
+  // 1. MEKAN
+  {
+    "name": "Barida Cam Kafe",
+    "address": "Süleyman Demirel Üniversitesi Batı Yerleşkesi Kafe Alanı",
+    "rating": 5,
+    "foodanddrink": ["çay", "kahve", "pasta", "sandviç", "muffin", "kurabiye", "tost","salep", "sıcak çikolata", "limonata", "smoothie", "poğaça", "açma", "börek", "kek", "salata",  "meyve suyu", "espresso", "latte", "cappuccino",  "mocha", "americano", "filtre kahve", "çikolatalı kek"],
+    "coordinates": [37.832265, 30.524732],
+    "hours": [
+      { "days": "Pazartesi-Cuma", "open": "09:00", "close": "17:00", "isClosed": false },
+      { "days": "Cumartesi-Pazar", "open": "11:00", "close": "17:00", "isClosed": false }
+    ],
+    "comments": [
+        { "author": "Sinan", "rating": 5, "text": "Çaylar taze.", "date": new Date("2024-10-12") },
+        { "author": "Ayşe", "rating": 4, "text": "Ders aralarında uğrak mekanımız, pastaları fena değil.", "date": new Date("2024-11-01") }
+    ]
+  },
+  // 2. MEKAN
+  {
+    "name": "Routine Burger",
+    "address": "Fatih 4555. Sokak No:6 /1 Merkez, Fatih, 4555. Sk. No:6, 32200 Isparta Merkez/Isparta",
+    "rating": 4,
+    "foodanddrink": ["hamburger", "patates kızartması", "kola", "milkshake"],
+    "coordinates": [37.842, 30.538],
+    "hours": [
+      { "days": "Pazartesi-Cuma", "open": "11:00", "close": "23:00", "isClosed": false },
+      { "days": "Cumartesi-Pazar", "open": "12:00", "close": "00:00", "isClosed": false }
+    ],
+    "comments": [
+        { "author": "Mert", "rating": 5, "text": "Burgerleri gerçekten çok lezzetli, tavsiye ederim.", "date": new Date("2024-11-20") },
+        { "author": "Selin", "rating": 4, "text": "Milkshake çeşitleri çok iyi ama hafta sonu yer bulmak zor.", "date": new Date("2024-11-15") },
+        { "author": "Kaan", "rating": 5, "text": "Fatih mahallesinin incisi, soslarına bayıldım.", "date": new Date("2024-10-30") }
+    ]
+  },
+  // 3. MEKAN
+  {
+    "name": "Yesene Döner",
+    "address": "Pirimehmet, 1738. Sk., 32100 Isparta Merkez/Isparta",
+    "rating": 3,
+    "foodanddrink": ["tavuk döner", "pilav", "ayran"],
+    "coordinates": [37.848, 30.542],
+    "hours": [
+      { "days": "Her gün", "open": "08:00", "close": "22:00", "isClosed": false }
+    ],
+    "comments": [
+        { "author": "Burak", "rating": 3, "text": "Fiyat performans yeri, öğrenci işi.", "date": new Date("2024-09-25") },
+        { "author": "Elif", "rating": 4, "text": "Döneri lezzetli ama bazen servis yavaş olabiliyor.", "date": new Date("2024-10-05") }
+    ]
+  },
+  // 4. MEKAN
+  {
+    "name": "Barbi Döner",
+    "address": "Kutlubey, İstasyon Cd., 32100 Isparta Merkez/Isparta",
+    "rating": 4,
+    "foodanddrink": ["tavuk döner", "ayran", "et döner"],
+    "coordinates": [37.833, 30.526],
+    "hours": [
+      { "days": "Pazartesi-Cumartesi", "open": "10:00", "close": "21:00", "isClosed": false },
+      { "days": "Pazar", "open": "Kapalı", "close": "Kapalı", "isClosed": true }
+    ],
+    "comments": [
+        { "author": "Cem", "rating": 5, "text": "İstasyon caddesindeki en iyi soslu döner.", "date": new Date("2024-11-10") },
+        { "author": "Zeynep", "rating": 4, "text": "Porsiyonlar doyurucu, ayranı bol köpüklü.", "date": new Date("2024-11-22") },
+        { "author": "Onur", "rating": 3, "text": "Öğle saatlerinde çok kalabalık oluyor.", "date": new Date("2024-10-18") }
+    ]
+  },
+  // 5. MEKAN
+  {
+    "name": "Şehzade Döner&Kebap",
+    "address": "Bahçelievler, 108. Cd. No:55, 32200 Isparta Merkez/Isparta",
+    "rating": 5,
+    "foodanddrink": ["et döner", "iskender", "şalgam", "tavuk döner", "puding"],
+    "coordinates": [37.768, 30.559],
+    "hours": [
+      { "days": "Her gün", "open": "11:00", "close": "03:00", "isClosed": false }
+    ],
+    "comments": [
+        { "author": "Ali", "rating": 5, "text": "Isparta'nın en iyi et dönercisi.", "date": new Date("2024-11-25") },
+        { "author": "Fatma", "rating": 5, "text": "İskenderi efsane, tereyağını bol döküyorlar.", "date": new Date("2024-11-18") },
+        { "author": "Mehmet", "rating": 5, "text": "Gece geç saate kadar açık olması süper.", "date": new Date("2024-10-29") }
+    ]
+  },
+  // 6. MEKAN
+  {
+    "name": "Balta Burger",
+    "address": "Modernevler Mah. 3102 Sok ABlok No:1-3A İç Kapı :26, 32000 Merkez/Isparta",
+    "rating": 4,
+    "foodanddrink": ["cheeseburger", "soğan halkası", "gazoz"],
+    "coordinates": [37.855, 30.515],
+    "hours": [
+      { "days": "Hafta içi", "open": "11:00", "close": "21:00", "isClosed": false },
+      { "days": "Hafta sonu", "open": "12:00", "close": "23:00", "isClosed": false }
+    ],
+    "comments": [
+        { "author": "Deniz", "rating": 4, "text": "Cheeseburgerin ekmeği çok tazeydi.", "date": new Date("2024-11-02") },
+        { "author": "Can", "rating": 5, "text": "Soğan halkaları ev yapımı gibi, bayıldım.", "date": new Date("2024-11-12") }
+    ]
+  }
+]);
