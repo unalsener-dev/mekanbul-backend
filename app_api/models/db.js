@@ -1,5 +1,7 @@
 var mongoose = require("mongoose");
-var dbURI = "mongodb://localhost/mekanbul";
+
+var dbURI = "mongodb+srv://unalsener0_db_user:eleveneleven@cluster0.6fxh9ko.mongodb.net/mekanbul?appName=Cluster0";
+//var dbURI = "mongodb://localhost/mekanbul";
 
 // Eğer üretim ortamındaysak (Vercel), URI'yi çevre değişkeninden al
 if (process.env.NODE_ENV === "production") {
