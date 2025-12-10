@@ -1,0 +1,287 @@
+{
+	"info": {
+		"_postman_id": "52c82679-7b3c-457b-9c67-e5e3db59adfe",
+		"name": "Ünal Şener",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "50532814"
+	},
+	"item": [
+		{
+			"name": "Add Venue",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Coffy",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "Isparta Meydan AVM",
+							"type": "text"
+						},
+						{
+							"key": "lat",
+							"value": "37.8",
+							"type": "text"
+						},
+						{
+							"key": "long",
+							"value": "30.5",
+							"type": "text"
+						},
+						{
+							"key": "foodanddrink",
+							"value": "icelatte, iceamericano, icamocha",
+							"type": "text"
+						},
+						{
+							"key": "days1",
+							"value": "Pazartesi - Cuma",
+							"type": "text"
+						},
+						{
+							"key": "open1",
+							"value": "9.00",
+							"type": "text"
+						},
+						{
+							"key": "close1",
+							"value": "23.00",
+							"type": "text"
+						},
+						{
+							"key": "isClosed1",
+							"value": "false",
+							"type": "text"
+						},
+						{
+							"key": "days2",
+							"value": "Cumartesi - Pazar",
+							"type": "text"
+						},
+						{
+							"key": "open2",
+							"value": "10.00",
+							"type": "text"
+						},
+						{
+							"key": "close2",
+							"value": "22.00",
+							"type": "text"
+						},
+						{
+							"key": "isClosed2",
+							"value": "false",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:3000/api/venues"
+			},
+			"response": []
+		},
+		{
+			"name": "List Nearly Venues",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/venues?lat=37.8&long=30.5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"venues"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "37.8"
+						},
+						{
+							"key": "long",
+							"value": "30.5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Venue",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/api/venues/69393fdc98d70e112b8aef58"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Venue",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Routine Burger GÜNCEL",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "Fatih Mahallesi",
+							"type": "text"
+						},
+						{
+							"key": "lat",
+							"value": "37.842",
+							"type": "text"
+						},
+						{
+							"key": "long",
+							"value": "30.538",
+							"type": "text"
+						},
+						{
+							"key": "days1",
+							"value": "Pazartesi - Cuma",
+							"type": "text"
+						},
+						{
+							"key": "open1",
+							"value": "10.00",
+							"type": "text"
+						},
+						{
+							"key": "close1",
+							"value": "22.00",
+							"type": "text"
+						},
+						{
+							"key": "isClosed1",
+							"value": "false",
+							"type": "text"
+						},
+						{
+							"key": "days2",
+							"value": "Pazar",
+							"type": "text"
+						},
+						{
+							"key": "open2",
+							"value": "12.00",
+							"type": "text"
+						},
+						{
+							"key": "close2",
+							"value": "23.00",
+							"type": "text"
+						},
+						{
+							"key": "isClosed2",
+							"value": "false",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:3000/api/venues/69393fdc98d70e112b8aef59"
+			},
+			"response": []
+		},
+		{
+			"name": "Add Comment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "author",
+							"value": "Ünal",
+							"type": "text"
+						},
+						{
+							"key": "rating",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "text",
+							"value": "Ders çalışmak için mükemmel",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:3000/api/venues/69393fdc98d70e112b8aef58/comments"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Comment",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/api/venues/69393fdc98d70e112b8aef58/comments/6939466ab854fed9f6fd7654"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Comment",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "author",
+							"value": "Kemal",
+							"type": "text"
+						},
+						{
+							"key": "rating",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "text",
+							"value": "Çaylar bayattı, fikrim değişti.",
+							"type": "text"
+						}
+					]
+				},
+				"url": "https://mekanbul-backend-5pxw.vercel.app/venues/6926df99c225e034d2f9a354/comments/6926e01073e021bf3f45476a"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Comment",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:3000/api/venues/69393fdc98d70e112b8aef58/comments/6939466ab854fed9f6fd7654"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Venue",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:3000/api/venues/693948769ad18327849580e3"
+			},
+			"response": []
+		}
+	]
+}
