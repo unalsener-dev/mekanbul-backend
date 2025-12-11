@@ -78,7 +78,7 @@ Aşağıda Postman ile alınmış test sonuçlarının ekran görüntüleri bulu
 ![Add Venue](tests/Add_Venue.png)
 
 ### List Nearly Venues (GET)
-![List Nearly Venues](tests/List_Nearly_Venues.png)
+![List Nearly Venues](tests/List_Nearly _Venues.png)
 
 ### Get Venue (GET)
 ![Get Venue](tests/Get_Venue.png)
