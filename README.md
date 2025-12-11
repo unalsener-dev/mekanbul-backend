@@ -6,8 +6,7 @@ Bu repo **mekanbul-backend** uygulamasının basit Node.js + Express + Mongoose 
 
 ## 🌍 Canlı API (Vercel)
 
-```
-[API’yi görmek için buraya tıkla](https://mekanbul-backend-5pxw.vercel.app/api/venues)```
+[API'yi görmek için buraya tıkla](https://mekanbul-backend-5pxw.vercel.app)
 
 ---
 
@@ -78,17 +77,14 @@ Aşağıda Postman ile alınmış test sonuçlarının ekran görüntüleri bulu
 ### Add Venue (POST)
 ![Add Venue](tests/Add_Venue.png)
 
+### List Nearly Venues (GET)
+![List Nearly Venues](tests/List_Nearly_Venues.png)
+
 ### Get Venue (GET)
 ![Get Venue](tests/Get_Venue.png)
 
 ### Update Venue (PUT)
 ![Update Venue](tests/Update_Venue.png)
-
-### Delete Venue (DELETE)
-![Delete Venue](tests/Delete_Venue.png)
-
-### List Nearly Venues (GET)
-![List Nearly Venues](tests/List_Nearly_Venues.png)
 
 ### Add Comment (POST)
 ![Add Comment](tests/Add_Comment.png)
@@ -101,6 +97,9 @@ Aşağıda Postman ile alınmış test sonuçlarının ekran görüntüleri bulu
 
 ### Delete Comment (DELETE)
 ![Delete Comment](tests/Delete_Comment.png)
+
+### Delete Venue (DELETE)
+![Delete Venue](tests/Delete_Venue.png)
 
 ---
 
@@ -164,4 +163,3 @@ BACKEND/
 - **MongoDB** - NoSQL veritabanı
 - **Mongoose** - MongoDB ODM
 - **Vercel** - Deployment platformu
-
