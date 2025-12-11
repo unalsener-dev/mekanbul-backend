@@ -1,48 +1,174 @@
-# 📍 Mekanbul Backend
+# 📌 mekanbul-backend
 
-Bu proje, **Web Teknolojileri ve Programlama** dersi kapsamında geliştirilmiş; mekanları listeleyen, detaylarını sunan ve yorum altyapısını sağlayan bir **RESTful API** sunucusudur.
-
-Proje, veritabanı olarak **MongoDB Atlas (Cloud)** kullanmaktadır ve veriler bulutta tutulmaktadır.
-
-## 🚀 Kullanılan Teknolojiler
-
-* **Node.js**: Sunucu tarafı çalışma ortamı
-* **Express.js**: Web uygulama çatısı
-* **MongoDB Atlas**: Bulut tabanlı NoSQL veritabanı
-* **Mongoose**: MongoDB için nesne modelleme aracı
+Bu repo **mekanbul-backend** uygulamasının basit Node.js + Express + Mongoose backend'idir. Uygulama, mekan (venue) verilerini MongoDB Cloud üzerinde tutar ve REST API üzerinden listeler, ekler, günceller ve siler.
 
 ---
 
-## 🛠️ Kurulum ve Çalıştırma Adımları
+## 🌍 Canlı API (Vercel)
 
-Bu projeyi yerel bilgisayarınızda çalıştırmak için aşağıdaki adımları izleyebilirsiniz:
-
-### 1. Projeyi Klonlayın
-```bash
-git clone https://github.com/unalsener-dev/mekanbul-backend.git
-cd mekanbul-backend
 ```
+https://mekanbul-backend-5pxw.vercel.app/api/venues
 
-### 2. Bağımlılıkları Yükleyin
+---
 
-Proje dosyalarında `node_modules` klasörü bulunmamaktadır (`.gitignore` ile engellenmiştir). Gerekli paketleri yüklemek için terminalde şu komutu çalıştırın:
+## 📖 Kısa Açıklama
+
+- API, mekan (venue) verilerini yönetir: listeleme, ekleme, görüntüleme, güncelleme, silme.
+- MongoDB Cloud kullanır.
+- Bağlantı bilgisi `.env` dosyasındaki `MONGODB_URI` değişkeninden gelir.
+- (Bakınız: `app_api/models/db.js`)
+
+---
+
+## 🚀 Kurulum
+
+Projeyi klonladıktan sonra bağımlılıkları yükleyin:
+
 ```bash
+cd /path/to/backend
 npm install
 ```
 
-### 3. Uygulamayı Başlatın
+`.env` dosyasını oluşturun ve MongoDB bağlantı bilgilerinizi ekleyin:
 
-Veritabanı bağlantı ayarları `app_api/models/db.js` dosyasında yapılandırılmıştır ve doğrudan çalışmaya hazırdır.
+```
+MONGODB_URI=your_mongodb_connection_string
+PORT=3000
+```
+
+---
+
+## ▶️ Uygulamayı Çalıştırma
+
 ```bash
 npm start
 ```
 
-Veya `nodemon` yüklü ise:
-```bash
-nodemon
+Uygulama varsayılan olarak `http://localhost:3000` adresinde çalışacaktır.
+
+---
+
+## 📚 API Endpoints
+
+### Mekan İşlemleri
+
+| Method | Endpoint | Açıklama |
+|--------|----------|----------|
+| `GET` | `/api/venues` | Tüm mekanları listele |
+| `POST` | `/api/venues` | Yeni mekan ekle |
+| `GET` | `/api/venues/:venueid` | Mekan detayını getir |
+| `PUT` | `/api/venues/:venueid` | Mekan güncelle |
+| `DELETE` | `/api/venues/:venueid` | Mekan sil |
+
+### Yorum İşlemleri
+
+| Method | Endpoint | Açıklama |
+|--------|----------|----------|
+| `POST` | `/api/venues/:venueid/comments` | Yorum ekle |
+| `GET` | `/api/venues/:venueid/comments/:commentid` | Yorum getir |
+| `PUT` | `/api/venues/:venueid/comments/:commentid` | Yorum güncelle |
+| `DELETE` | `/api/venues/:venueid/comments/:commentid` | Yorum sil |
+
+---
+
+## 🧪 Postman Test Sonuçları
+
+Aşağıda Postman ile alınmış test sonuçlarının ekran görüntüleri bulunmaktadır.
+
+### Add Venue (POST)
+![Add Venue](tests/Add_Venue.png)
+
+### Get Venue (GET)
+![Get Venue](tests/Get_Venue.png)
+
+### Update Venue (PUT)
+![Update Venue](tests/Update_Venue.png)
+
+### Delete Venue (DELETE)
+![Delete Venue](tests/Delete_Venue.png)
+
+### List Nearly Venues (GET)
+![List Nearly Venues](tests/List_Nearly_Venues.png)
+
+### Add Comment (POST)
+![Add Comment](tests/Add_Comment.png)
+
+### Get Comment (GET)
+![Get Comment](tests/Get_Comment.png)
+
+### Update Comment (PUT)
+![Update Comment](tests/Update_Comment.png)
+
+### Delete Comment (DELETE)
+![Delete Comment](tests/Delete_Comment.png)
+
+---
+
+## 📁 Postman Koleksiyonu
+
+Tüm API istekleri aşağıdaki koleksiyon içine eklenmiştir:
+
+```
+unal-mekanbul-api.postman_collection.json
 ```
 
-Terminalde şu çıktıyı gördüğünüzde bağlantı başarılıdır:
+Bu dosya proje klasörünün içindedir ve Postman'e **Import** edilerek kullanılabilir.
+
+---
+
+## 📂 Proje Klasör Yapısı
+
+Hocanın slaytındaki yapıya uygundur:
+
 ```
-"Mongoose ... adresindeki veritabanına bağlandı"
+BACKEND/
+├── app_api/
+│   ├── controllers/
+│   │   ├── CommentController.js
+│   │   └── VenueController.js
+│   ├── models/
+│   │   ├── db.js
+│   │   └── venue.js
+│   └── routes/
+│       └── index.js
+├── bin/
+├── node_modules/
+├── public/
+├── routes/
+├── tests/
+│   ├── Add_Comment.png
+│   ├── Add_Venue.png
+│   ├── Delete_Comment.png
+│   ├── Delete_Venue.png
+│   ├── Get_Comment.png
+│   ├── Get_Venue.png
+│   ├── List_Nearly_Venues.png
+│   ├── Update_Comment.png
+│   └── Update_Venue.png
+├── .gitignore
+├── app.js
+├── insert.mongodb
+├── package-lock.json
+├── package.json
+├── README.md
+├── unal-mekanbul-api.postman_collection.json
+└── update.mongodb
 ```
+
+---
+
+## 🛠️ Kullanılan Teknolojiler
+
+- **Node.js** - JavaScript runtime
+- **Express.js** - Web framework
+- **MongoDB** - NoSQL veritabanı
+- **Mongoose** - MongoDB ODM
+- **Vercel** - Deployment platformu
+
+---
+
+## 👤 Geliştirici
+
+**Ünal Şener**
+
+
