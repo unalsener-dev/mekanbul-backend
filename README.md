@@ -165,10 +165,3 @@ BACKEND/
 - **Mongoose** - MongoDB ODM
 - **Vercel** - Deployment platformu
 
----
-
-## 👤 Geliştirici
-
-**Ünal Şener**
-
----
