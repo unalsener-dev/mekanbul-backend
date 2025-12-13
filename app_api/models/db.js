@@ -1,12 +1,10 @@
+require('dotenv').config();
 var mongoose = require("mongoose");
 
-var dbURI = "mongodb+srv://unalsener0_db_user:eleveneleven@cluster0.6fxh9ko.mongodb.net/mekanbul?appName=Cluster0";
+//var dbURI = "mongodb+srv://unalsener0_db_user:eleveneleven@cluster0.6fxh9ko.mongodb.net/mekanbul?appName=Cluster0";
 //var dbURI = "mongodb://localhost/mekanbul";
 
-// Eğer üretim ortamındaysak (Vercel), URI'yi çevre değişkeninden al
-if (process.env.NODE_ENV === "production") {
-    dbURI = process.env.MONGODB_URI;
-}
+var dbURI = process.env.MONGODB_URI || "mongodb://localhost/mekanbul";
 
 mongoose.connect(dbURI);
 
