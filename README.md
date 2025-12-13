@@ -6,7 +6,7 @@ Bu repo **mekanbul-backend** uygulamasının basit Node.js + Express + Mongoose 
 
 ## 🌍 Canlı API (Vercel)
 
-[API'yi görmek için buraya tıkla](https://mekanbul-backend-5pxw.vercel.app)
+[API'yi görmek için buraya tıkla](https://mekanbul-backend-ten.vercel.app/)
 
 ---
 
