@@ -108,7 +108,7 @@ Aşağıda Postman ile alınmış test sonuçlarının ekran görüntüleri bulu
 Tüm API istekleri aşağıdaki koleksiyon içine eklenmiştir:
 
 ```
-unal-mekanbul-api.postman_collection.json
+Ünal Şener.postman_collection.json
 ```
 
 Bu dosya proje klasörünün içindedir ve Postman'e **Import** edilerek kullanılabilir.
@@ -150,7 +150,7 @@ BACKEND/
 ├── package-lock.json
 ├── package.json
 ├── README.md
-├── unal-mekanbul-api.postman_collection.json
+├── Ünal Şener.postman_collection.json
 └── update.mongodb
 ```
 
